@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="news">
     news
     <p>newsid:{{$route.params.id}}</p>
     <ul>
@@ -18,10 +18,14 @@
     },
     components: {
 
+    },
+    layout: 'blog',
+    asyncData () {
+      window.scrollTo(0,0);
     }
   }
 </script>
 
-<style>
-
+<style scoped>
+  .news{height: 2000px;}
 </style>

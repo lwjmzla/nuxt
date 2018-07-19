@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
+import axios from 'axios'  // 这种方式的话 如果在别的页面也用到这个插件，会被打包多次。  解决方式 去  nuxt.config.js 里面配置 build.vendor 来解决：
 export default {
   data(){
      return {

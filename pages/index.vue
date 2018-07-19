@@ -1,6 +1,10 @@
 <template>
   <section class="container">
     <div>
+      <div class="diss"  @click="$store.commit('increment')">
+        <img src="~static/logo.png" />
+        {{ $store.state.counter }}
+      </div>
       <ul>
         <li><nuxt-link :to="{name:'index'}">HOME</nuxt-link></li>
         <li><nuxt-link :to="{name:'about',params:{id:1}}">ABOUT222</nuxt-link></li>
@@ -28,6 +32,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 2000px;
 }
 
 .title {
@@ -50,4 +55,10 @@ export default {
 .links {
   padding-top: 15px;
 }
+.diss{
+  width: 300px;
+  height: 300px;
+  background: url('~static/icons.png') no-repeat center center red;
+}
+.diss img{transform: rotate(90deg);}
 </style>
